@@ -12,6 +12,9 @@ telescope. It listens for connections from Stellarium's telescope-control
 plugin on port 10001. You can then configure your camera to output to the
 output folder and see where you are pointing in Stellarium.
 
+autosolver requires a working install of the astrometry.net software. Please
+see their docs for info on how to install it.
+
 Example:
 
 `python autosolver.py --watch-folder ./watch/ --output-folder ./output/`
