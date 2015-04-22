@@ -111,9 +111,6 @@ def main():
     mkdir_p(watch_folder)
     mkdir_p(output_folder)
 
-
-    open_sockets = []
-
     # AF_INET means IPv4.
     # SOCK_STREAM means a TCP connection.
     # SOCK_DGRAM would mean an UDP "connection".
@@ -143,6 +140,7 @@ def main():
         # Sometimes we get the notification before the file is done being written. Wait half a second before processing.
         e = Event()
         e.wait(0.5)
+        e = None
 
         result = solve(event.src_path, output_folder)
 
